@@ -1,0 +1,9 @@
+import google.generativeai as genai
+import streamlit as st
+genai.configure(api_key='AIzaSyDbtoZaFMpnRys7mUHOKfZIo1GLE14Qdw8')
+model=genai.GenerativeModel('gemini-2.5-flash')
+a="You are a mathematics assistant,your task is to answer only this content"
+prompt=st.text_input('enter your question')
+res=model.generate_content(prompt+a)
+if st.button("submit"):
+    st.write(res.text)
