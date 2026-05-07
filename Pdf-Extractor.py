@@ -1,7 +1,7 @@
 from pypdf import PdfReader
 import streamlit as st
 import google.generativeai as genai
-genai.configure(api_key='AIzaSyBzLQbPMe-uOHBw-wlYDg43lwCKXDkPrP4')
+genai.configure(api_key="Your API key")
 model=genai.GenerativeModel('gemini-2.5-flash')
 st.title("Pdf Extractor")
 file=st.file_uploader("Upload your PDF file", type=["pdf"])
