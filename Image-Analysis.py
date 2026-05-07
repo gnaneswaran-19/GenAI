@@ -2,7 +2,7 @@ import google.generativeai as genai
 import streamlit as st
 from PIL import Image
 from gtts import gTTS
-genai.configure(api_key='AIzaSyBzLQbPMe-uOHBw-wlYDg43lwCKXDkPrP4')
+genai.configure(api_key="Your API key")
 model = genai.GenerativeModel('gemini-2.5-flash')
 st.title("Image Analysis")
 img_file=st.file_uploader("Upload an image", type=["png", "jpg", "jpeg"])   
